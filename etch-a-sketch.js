@@ -13,11 +13,15 @@ for(i=0;i<=16;i++) {
 
     for(j=0; j<=16;j++) {
         const column = document.createElement('div');
+        column.classList.add('box');
         column.style.width = '20px';
         column.style.height = '20px';
         column.style.flex = '0 0 auto';
         column.style.border = '1px solid black';
         column.style.margin = '-1px -1px 0 0';
+        column.addEventListener('mouseover', () => {
+            column.style.backgroundColor = 'black';
+        })
         row.appendChild(column);
 
         // createBox();
@@ -31,6 +35,7 @@ for(i=0;i<=16;i++) {
     }
 }
 
+
 function createBox() {
     const box = document.createElement('div');
     // box.style.margin = 0;
@@ -41,6 +46,11 @@ function createBox() {
     box.style.border = '2px solid black';
     container.appendChild(box);
 };
+
+// container.addEventListener('mouseover', () => {
+//     var item = document.getElementsByClassName('box');
+//     item.style.backgroundColor = 'pink';
+// });
 
 // const box = document.createElement('div');
 // box.style.width = '100px';
